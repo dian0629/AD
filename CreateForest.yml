@@ -1,5 +1,5 @@
 - name: BUILD NEW AD FOREST
-  hosts: all
+  hosts: DC
   gather_facts: yes
 
   tasks:
