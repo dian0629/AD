@@ -13,8 +13,8 @@
 
     - name: Create new forest
       win_domain:
-        dns_domain_name: training.local
-        safe_mode_password: RememberTheCant!
+        dns_domain_name: nhc.cloud.local
+        safe_mode_password: DoOrDoNotThereIsNoTry!
       register: result
 
     - name: Reboot after creation
