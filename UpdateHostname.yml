@@ -1,0 +1,15 @@
+---
+- name: UPDATE WINDOWS HOSTNAME
+  hosts: "{{ hostname }}"
+  gather_facts: yes
+  
+  tasks:
+    - name: "update hostname on {{ ansible_hostname }} to {{ hostname }}"
+      win_hostname:
+        name: {{ hostname }}
+      register: res
+      
+    - name: reboot
+      win_reboot:
+      when: res.reboot_required
+        
