@@ -1,9 +1,9 @@
 - name: REMOVE AD SERVICES FEATURE
-  hosts: DC1
+  hosts: "{{ hostname }}"
   gather_facts: yes
 
   tasks:
-    - name: Install AD Services feature
+    - name: Remove AD Services feature
       win_feature:
         name: AD-Domain-Services
         include_management_tools: yes
