@@ -6,7 +6,7 @@
   tasks:
     - name: "update hostname on {{ ansible_hostname }} to {{ hostname }}"
       win_hostname:
-        name: {{ hostname }}
+        name: "{{ hostname }}"
       register: res
       
     - name: reboot
